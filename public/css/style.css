@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lobster", cursive;
+}
+/* Global */
+a {
+  text-decoration-line: none;
+  color: #fff;
+}
+nav {
+  background-color: #000;
+  padding: 5px 3vw;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+main {
+  padding: 4vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 73vh;
+  background-color: #2b2a2a;
+  gap: 5vw;
+}
+main figure {
+  background-color: #49494944;
+  width: 25vw;
+  padding: 4px;
+  border-radius: 10px;
+  text-align: center;
+}
+main figure:hover {
+  transform: scale(1.1);
+}
+main figure img {
+  width: 22vw;
+  height: 22vw;
+  border-radius: 50%;
+}
+main figure figcaption {
+  margin: 8px 0;
+  color: #fff;
+}
+main figure button {
+  background-color: #ff6666;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.home {
+  background: url("../img/home.png") center / cover no-repeat;
+}
+.home form {
+  background-color: rgba(255, 255, 255, 0.336);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  height: 20vh;
+  margin: 20vh 0 0 28vw;
+  border-radius: 15px;
+}
+.home form input:nth-child(1) {
+  width: 22vw;
+}
+.home form input:nth-child(2) {
+  background-color: #ff6666;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+footer {
+  background-color: #000;
+  padding: 5px 2vw;
+}
+footer {
+  color: #fff;
+  display: flex;
+}
+footer div {
+  width: 30vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+/* Animations */
+.alb img {
+  animation-name: loop;
+  animation-timing-function: cubic-bezier(0.1, 0.1, 0.1, 0);
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes loop {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <main>
+        <% data.forEach(elt => { %>
+            <figure class="alb">
+                <img src=<%= elt.images[1].url %> alt="">
+                <figcaption><%= elt.name%></figcaption>
+                <a href=<%=`/tracks/${elt.id}`%>><button>View Albums</button></a>
+            </figure>
+
+        <% } )%>
+      
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+</html>
